@@ -1,0 +1,12 @@
+goal:
+
+1 improve the appearance of the file and overall look
+2.make it  a searchable database that we can upload into a cloud for users to access
+3. the purpose for the database is to : 
+3.1 determine the bopcus category by code and the applicable description and the required documentation supporting the specific category at any single search
+3.2 automate and present the information when the user input a search request using the bopcus category code or description 
+3.3 create a history file of the user login access in the bopcus database and the specific searches 
+3.4 the database should be protected by admin priviledges and all amendments or changes to the database should be restricted to the admin priviledges
+3.5 the database should be able to be accessed by multiple users at the same time using the database to access the information on the database
+3.6 the database should create a log.file of each user and the searches conducted and save it under the specific user accessing the database
+3.7 the database should be copyright protected by the creator Karin E Scott and a log.file should be created within the database acknowledging the creator of the searchable database
