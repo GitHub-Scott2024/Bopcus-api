@@ -1,16 +1,14 @@
-import os
 from flask import Flask, request, jsonify
 import mysql.connector
 
 app = Flask(__name__)
 
-# Database Configuration (Uses Environment Variables)
+# Database Configuration
 DB_CONFIG = {
-    "host": os.getenv("DB_HOST", "localhost"),
-    "user": os.getenv("DB_USER", "root"),
-    "password": os.getenv("DB_PASSWORD", "A8c-E2g-B1d-W8f+123_MySQL"),
-    "database": os.getenv("DB_NAME", "bopcus_db"),
-    "ssl_disabled": True  # ✅ Fix: Disable SSL to prevent error 2026 (HY000)
+    "host": "localhost",
+    "user": "root",
+    "password": "A8c-E2g-B1d-W8f+123_MySQL",  # Ensure this matches your MySQL password
+    "database": "bopcus_db"
 }
 
 # Function to connect to MySQL
@@ -48,11 +46,6 @@ def search_bopcus():
     except mysql.connector.Error as err:
         return jsonify({"error": f"Database error: {err}"}), 500
 
-# API Route: Health Check (Useful for Render Monitoring)
-@app.route('/healthz', methods=['GET'])
-def health_check():
-    return jsonify({"status": "healthy"}), 200
-
 # Run Flask API
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=int(os.getenv("PORT", 5000)), debug=False)
+    app.run(debug=True, port=5000)
