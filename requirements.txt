@@ -1,6 +1,6 @@
-flask
+Flask
 mysql-connector-python
-flask-jwt-extended
-flask-limiter
-flask-caching
-gunicorn
+Flask-JWT-Extended
+Flask-Limiter
+Flask-Caching
+gunicorn==23.0.0
